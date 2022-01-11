@@ -31,13 +31,14 @@ const theme = extendTheme({
   },
 });
 
-function MyApp({ Component, pageProps }) {
-  return;
-  <ChakraProvider theme={theme}>
-    <PlayerLayout>
-      <Component {...pageProps} />;
-    </PlayerLayout>
-  </ChakraProvider>;
-}
+const MyApp = ({ Component, pageProps }) => {
+  return (
+    <ChakraProvider theme={theme}>
+      <PlayerLayout>
+        <Component {...pageProps} />
+      </PlayerLayout>
+    </ChakraProvider>
+  );
+};
 
 export default MyApp;
